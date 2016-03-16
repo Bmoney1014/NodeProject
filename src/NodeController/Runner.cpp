@@ -5,9 +5,13 @@
  *      Author: bhos1889
  */
 
-int main()
-{
-	return 0;
-}
+#include "NodeController.h"
+
+int Main()
+    {
+    NodeController * baseController = new NodeController();
+    baseController->start();
+    return 0;
+    }
 
 

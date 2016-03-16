@@ -5,10 +5,41 @@
  *      Author: bhos1889
  */
 
+#include <iosframe>
 #include "NodeController.h"
-template <class Type>
+using namespace std;
 
-class NodeController
+NodeController::NodeController()
+    {
+    notHipsterInts = new CTECArray<int>(5);
+    }
 
-main = 0;
+NodeController::~NodeController()
+	{
+	//TODO Auto-generated destructor stub
+	}
 
+void NodeController :: start()
+{
+    arrayTimer.startTimer();
+
+    for(int index = 0; index < notHipsterInts->getSize(); index++)
+	{
+	notHipsterInts->set(index, (index * 23));
+	}
+
+    for(int index = notHipsterInts->getSize() - 1; index >= 0; index--)
+	{
+	cout << "The contents of the notHipsterInts array node " << index << " are " << notHipsterInts->get(index) << endl;
+	}
+    arrayTimer.stopTimer();
+    {
+
+    }
+
+    arrayTimer.displayTimerInformation();
+    {
+
+    }
+
+}

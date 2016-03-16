@@ -15,10 +15,12 @@
 class NodeController
 {
 private:
-	Node<int> intNode;
+    CTECArray<int> * notHipsterInts;
+    Timer arrayTimer;
 public:
-	NodeController();
-	virtual ~NodeController();
+    NodeController();
+    virtual ~NodeController();
+    void start();
 };
 
 #endif /* NODECONTROLLER_NODECONTROLLER_H_ */

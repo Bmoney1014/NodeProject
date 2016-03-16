@@ -7,7 +7,8 @@
 
 #include "Node.h"
 #include <iostream>
-//using amespace std;
+//using namespace std;
+
 template <class Type>
 Node<Type>::Node()
 {
@@ -34,9 +35,6 @@ Type Node<Type> :: getValue()
 {
 	return this->value;
 }
-
-template <class Type>
-void Node<Type> :: Node()
 
 template <class Type>
 
