@@ -12,25 +12,25 @@ using namespace std;
 template <class Type>
 CTECArray<Type>::CTECArray(int size)
 {
-	this->size = size;
-	this->head = nullptr;
+    this->size = size;
+    this->head = nullptr;
 
-	assert(size > 0);
+    assert(size > 0);
 
-	for (int index = 0; index < size; index++)
-	    {
-		if(head != nullptr)
-		    {
-		    ArrayNode<Type> * nextNode = new ArrayNode<Type>();
-		    nextNode->setNext(head);
-		    head = nextNode;
-		    }
-		else
-		    {
-			ArrayNode<Type> * first = new ArrayNode<Type>();
-			head = first;
-		    }
-	    }
+    for (int index = 0; index < size; index++)
+    {
+    if(head != nullptr)
+	{
+	ArrayNode<Type> * nextNode = new ArrayNode<Type>();
+	nextNode->setNext(head);
+	head = nextNode;
+	}
+    else
+	{
+	    ArrayNode<Type> * first = new ArrayNode<Type>();
+	    head = first;
+	}
+    }
 }
 
 template <class Type>
@@ -39,13 +39,13 @@ CTECArray<Type>::~CTECArray()
     ArrayNode<Type> * deleteMe = head;
     for (int index = 0; index < size; index++)
 	{
-	if(deleteMe->getNext())
+	if(deleteMe->getNext() != nullptr)
 	    {
-	    head delete->getNext();
+	    head = deleteMe->getNext();
 	    deleteMe->setNext(nullptr);
 	    {
-		delete deleteMe;
-		deleteMe = head;
+		delete deleteMe->getNext();
+	    deleteMe = head;
 	    }
 
 	    delete head;

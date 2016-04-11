@@ -15,8 +15,18 @@
 class NodeController
 {
 private:
-    CTECArray<int> * notHipsterInts;
-    Timer arrayTimer;
+    Timer mergeTimer;
+    int partition(int first, int last);
+    void quicksort(int first, int last);
+    void swap(int first, int last);
+    int * mergeData;
+    void testList();
+    void searchTest();
+    void doBogo();
+    void doMergesort();
+    void mergesort(int data[], int size);
+    void merge(int data[], int sizeOne, int sizeTwo);
+    void sortData();
 public:
     NodeController();
     virtual ~NodeController();
